@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012-2016, The CyanogenMod Project
+ * Copyright (C) 2012-2017, The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,16 +19,19 @@
 *
 * This file wraps a vendor camera module.
 */
+#define LOG_NDEBUG 0
+#define LOG_PARAMETERS
 
 #define LOG_TAG "CameraWrapper"
-
-#include <camera/CameraParameters.h>
-#include <camera/Camera.h>
 #include <cutils/log.h>
-#include <hardware/camera.h>
-#include <hardware/hardware.h>
-#include <utils/String8.h>
+
 #include <utils/threads.h>
+#include <utils/String8.h>
+#include <hardware/hardware.h>
+#include <hardware/camera.h>
+#include <camera/Camera.h>
+#include <camera/CameraParameters.h>
+#include <math.h>
 
 #define REAR_CAMERA_ID 0
 #define FRONT_CAMERA_ID 1
@@ -55,20 +58,20 @@ camera_module_t HAL_MODULE_INFO_SYM = {
          .module_api_version = CAMERA_MODULE_API_VERSION_1_0,
          .hal_api_version = HARDWARE_HAL_API_VERSION,
          .id = CAMERA_HARDWARE_MODULE_ID,
-         .name = "JF Camera Wrapper",
+         .name = "Samsung jf Camera Wrapper",
          .author = "The CyanogenMod Project",
          .methods = &camera_module_methods,
-         .dso = NULL,
-         .reserved = {0},
+         .dso = NULL, /* remove compilation warnings */
+         .reserved = {0}, /* remove compilation warnings */
     },
     .get_number_of_cameras = camera_get_number_of_cameras,
     .get_camera_info = camera_get_camera_info,
-    .set_callbacks = NULL,
-    .get_vendor_tag_ops = NULL,
-    .open_legacy = NULL,
-    .set_torch_mode = NULL,
-    .init = NULL,
-    .reserved = {0},
+    .set_callbacks = NULL, /* remove compilation warnings */
+    .get_vendor_tag_ops = NULL, /* remove compilation warnings */
+    .open_legacy = NULL, /* remove compilation warnings */
+    .set_torch_mode = NULL, /* remove compilation warnings */
+    .init = NULL, /* remove compilation warnings */
+    .reserved = {0}, /* remove compilation warnings */
 };
 
 typedef struct wrapper_camera_device {

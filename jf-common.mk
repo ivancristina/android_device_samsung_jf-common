@@ -92,6 +92,10 @@ PRODUCT_PACKAGES += \
     Snap \
     camera.msm8960
 
+#Additional camera
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    camera2.portability.force_api=1 
+
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8960 \
@@ -107,10 +111,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.conf:/system/etc/gps.conf \
     $(LOCAL_PATH)/configs/sap.conf:/system/etc/sap.conf
-
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \
