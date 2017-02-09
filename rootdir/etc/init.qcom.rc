@@ -47,7 +47,7 @@ on init
 
 on fs
     mount_all fstab.qcom
-    setprop ro.product.name jgedlteue
+    setprop ro.product.name jactivelte
 
 on post-fs-data
     # Create directories for tombstone
