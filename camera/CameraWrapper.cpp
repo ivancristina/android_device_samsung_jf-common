@@ -85,7 +85,7 @@ typedef struct wrapper_camera_device {
     __wrapper_dev->vendor->ops->func(__wrapper_dev->vendor, ##__VA_ARGS__); \
 })
 
-#define CAMERA_ID(device) (((wrapper_camera_device_t *)device)->id)
+#define CAMERA_ID(device) (((wrapper_camera_device_t *)(device))->id)
 
 static int check_vendor_module()
 {
