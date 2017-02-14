@@ -345,7 +345,7 @@
     </path>
 
     <path name="adc4">
-        <ctl name="SLIM_0_TX Channels" value="One" />
+        <ctl name="SLIM_0_TX Channels" value="Two" />
         <ctl name="SLIM TX7 MUX" value="DEC3" />
         <ctl name="DEC3 MUX" value="ADC4" />
     </path>
@@ -468,7 +468,7 @@
 
     <path name="voice-speaker-mic">
         <ctl name="SLIM_0_TX Channels" value="Two" />
-        <ctl name="SLIM TX7 MUX" value="DEC2" />
+        <ctl name="SLIM TX7 MUX" value="DEC3" />
         <ctl name="DEC3 MUX" value="ADC4" />
         <ctl name="ADC4 Volume" value="3" />
         <ctl name="DEC3 Volume" value="84" />
