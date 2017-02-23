@@ -50,7 +50,6 @@ ro.telephony.mms_data_profile=5
 ro.telephony.ril_class=jflteRIL
 
 # Sound steps
-ro.config.vc_call_vol_steps=12
 ro.config.media_vol_steps=20
 
 # Time
