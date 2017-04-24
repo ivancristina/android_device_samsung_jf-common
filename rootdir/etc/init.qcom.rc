@@ -487,7 +487,7 @@ service wpa_supplicant /system/bin/wpa_supplicant -g@android:wpa_wlan0 \
     oneshot
 
 service macloader /system/bin/macloader
-    class main
+    class late_start
     oneshot
     seclabel u:r:macloader_exec:s0
 
@@ -503,6 +503,9 @@ service thermal-engine /system/bin/thermal-engine
     class main
     user root
     group root
+	
+on property:wlan.driver.status=ok
+    start macloader
 
 # Disable boot timeout for external modems
 on property:persist.sys.mdm.timeout_disable=1
