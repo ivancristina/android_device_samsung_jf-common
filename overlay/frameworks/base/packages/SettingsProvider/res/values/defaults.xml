@@ -17,7 +17,6 @@
  */
 -->
 <resources>
-    <bool name="def_screen_brightness_automatic_mode">true</bool>
 	<string name="def_airplane_mode_radios" translatable="false">cell,bluetooth,wifi,nfc,wimax,ant</string>
 	<string name="airplane_mode_toggleable_radios" translatable="false">bluetooth,wifi,nfc,ant</string>
 </resources>
