@@ -93,7 +93,8 @@ PRODUCT_PACKAGES += \
     AntHalService \
     com.dsi.ant.antradio_library \
     libantradio \
-    ANTRadioService
+    ANTRadioService \
+	antradio_app
 
 # Camera
 PRODUCT_PACKAGES += \
