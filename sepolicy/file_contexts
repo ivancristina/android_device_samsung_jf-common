@@ -5,7 +5,7 @@
 /data/\.cid\.info                                          u:object_r:wifi_data_file:s0
 
 # Bluetooth
-/dev/btlock                                                u:object_r:btlock_file:s0
+/dev/btlock                                                u:object_r:bluetooth_dev:s0
 /dev/rfkill									                               u:object_r:rfkill_dev:s0
 
 # Needed by NFC
