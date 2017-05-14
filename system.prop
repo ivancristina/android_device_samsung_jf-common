@@ -50,6 +50,9 @@ mm.enable.smoothstreaming=true
 # NFC
 ro.nfc.port=I2C
 
+# OTA
+cm.updater.uri=https://raw.githubusercontent.com/tsvietOK/CMUpdater-API/master/lineage/jactivelte/api.json
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
