@@ -91,6 +91,7 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     Snap \
+	camera.msm8960
 
 #Additional camera
 ADDITIONAL_DEFAULT_PROPERTIES += \
