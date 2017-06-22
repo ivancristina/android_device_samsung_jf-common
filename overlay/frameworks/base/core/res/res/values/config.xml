@@ -112,7 +112,7 @@
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
 	
 	<!-- If this is true, the screen will fade off. -->
-    <bool name="config_animateScreenLights">true</bool>
+    <bool name="config_animateScreenLights">false</bool>
 
     <!-- An Array of "[ConnectivityManager connectionType],
          [# simultaneous connection types]"  -->
