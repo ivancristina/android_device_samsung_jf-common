@@ -60,4 +60,6 @@
 		<value>.2</value>    <!-- 513-4,096/hr -->
 		<value>2</value>    <!-- 4097-/hr -->
 	</array>
+	<allow-in-power-save package="com.google.android.gms" />
+    <allow-in-data-usage-save package="com.google.android.gms" />
 </device>
