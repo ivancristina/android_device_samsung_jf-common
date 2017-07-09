@@ -196,6 +196,10 @@ PRODUCT_COPY_FILES += \
 # Stlport
 PRODUCT_PACKAGES += \
     libstlport
+	
+# FlipFlap
+PRODUCT_PACKAGES += \
+    FlipFlap
 
 # Thermal
 PRODUCT_COPY_FILES += \
