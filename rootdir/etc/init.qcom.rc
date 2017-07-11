@@ -387,9 +387,6 @@ on boot
     # IR LED
     chown system radio /sys/class/sec/sec_ir/ir_send
     chown system radio /sys/class/sec/sec_ir/ir_send_result
-    
-    # Permission for HALL IC
-    chown system radio /sys/class/sec/sec_key/hall_detect
 
     # RIL fast dormancy
     chown system radio /sys/class/sec/bamdmux/waketime
