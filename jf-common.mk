@@ -197,6 +197,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libstlport
 	
+# Samsung
+PRODUCT_PACKAGES += \
+    SamsungServiceMode
+	
 # FlipFlap
 PRODUCT_PACKAGES += \
     FlipFlap
