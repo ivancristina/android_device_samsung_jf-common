@@ -94,7 +94,7 @@ PRODUCT_PACKAGES += \
     camera.msm8960
 
 #Additional camera
-ADDITIONAL_DEFAULT_PROPERTIES += \
+FINAL_DEFAULT_PROPERTIES += \
     camera2.portability.force_api=1 
 
 # Display
