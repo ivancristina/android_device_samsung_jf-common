@@ -181,10 +181,6 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
     libstagefrighthw
-    
-# Default OMX service to non-Treble
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.media.treble_omx=false
 
 # Power
 PRODUCT_PACKAGES += \
