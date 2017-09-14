@@ -91,6 +91,9 @@ EXTENDED_FONT_FOOTPRINT := true
 TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 
+# HIDL
+DEVICE_MANIFEST_FILE := device/samsung/jf-common/configs/manifest.xml
+
 # Includes
 TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 
