@@ -157,6 +157,10 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     lights.MSM8960
+	
+# Lights HIDL interfaces
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl
 
 # Media
 PRODUCT_COPY_FILES += \
