@@ -233,6 +233,10 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     libshim_ril
+	
+# Sensors HIDL interfaces
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
 
 # SPN override
 PRODUCT_COPY_FILES += \
