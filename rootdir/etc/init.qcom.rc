@@ -454,7 +454,7 @@ service qmuxd /system/bin/qmuxd
 service netmgrd /system/bin/netmgrd
     class main
     user root
-    group root wifi wakelock radio inet
+    group root wifi wakelock radio inet system
 
 # Start ril-daemon
 service ril-daemon /system/vendor/bin/hw/rild
