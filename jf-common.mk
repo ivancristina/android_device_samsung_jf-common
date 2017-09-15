@@ -153,6 +153,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/samsung_remote_ir.kl:system/usr/keylayout/samsung_remote_ir.kl \
     $(LOCAL_PATH)/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
     $(LOCAL_PATH)/keylayout/ue_rf4ce_remote.kl:system/usr/keylayout/ue_rf4ce_remote.kl
+	
+# Keymaster HIDL interfaces
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
 
 # Lights
 PRODUCT_PACKAGES += \
