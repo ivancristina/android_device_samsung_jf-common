@@ -149,7 +149,7 @@
 
 # Bluetooth
 /dev/btlock               0660   bluetooth  bluetooth
-/dev/ttyHS0               0660   bluetooth  net_bt
+/dev/ttyHS0               0660   bluetooth  bluetooth
 
 # DVB
 /dev/dvb/adapter0/demux*  0444   media      media
