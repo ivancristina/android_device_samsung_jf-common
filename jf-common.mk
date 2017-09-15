@@ -173,6 +173,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
+	
+# NFC HAL
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0-impl
 
 # OMX
 PRODUCT_PACKAGES += \
