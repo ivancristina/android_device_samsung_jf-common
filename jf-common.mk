@@ -93,11 +93,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 	
-# Bluetooth HAL
+# Bluetooth packages
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl \
     libbt-vendor
-    
+	
+# Bluetooth HIDL interfaces
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl
+
 # Camera
 PRODUCT_PACKAGES += \
 #    Snap \
@@ -191,7 +194,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 	
-# NFC HAL
+# NFC HIDL interfaces
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl
 
@@ -212,8 +215,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-impl \
     power.msm8960
+	
+# Power HIDL interfaces
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl
 
 # Ramdisk
 PRODUCT_PACKAGES += \
