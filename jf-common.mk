@@ -228,6 +228,7 @@ PRODUCT_PACKAGES += \
     libnetcmdiface \
     macloader \
     hostapd \
+    wificond \
     wpa_supplicant \
     wpa_supplicant.conf
 
