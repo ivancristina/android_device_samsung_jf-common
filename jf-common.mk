@@ -103,8 +103,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-#    Snap \
-#    camera.msm8960
+    Snap \
+    camera.msm8960
 
 #Additional camera
 #FINAL_DEFAULT_PROPERTIES += \
