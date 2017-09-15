@@ -446,7 +446,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
 service qmuxd /system/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps qcom_diag log
+    group radio audio bluetooth gps log
 
 service netmgrd /system/bin/netmgrd
     class main
@@ -457,7 +457,7 @@ service netmgrd /system/bin/netmgrd
 service ril-daemon /system/vendor/bin/hw/rild
     class main
     user radio
-    group radio cache inet misc audio log readproc wakelock qcom_diag
+    group radio cache inet misc audio log readproc wakelock
 	capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
