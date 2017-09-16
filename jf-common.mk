@@ -108,8 +108,7 @@ PRODUCT_PACKAGES += \
 
 #Additional camera
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    camera2.portability.force_api=1 \
-    camera.disable_treble=true
+    camera2.portability.force_api=1 
 
 # Display
 PRODUCT_PACKAGES += \
