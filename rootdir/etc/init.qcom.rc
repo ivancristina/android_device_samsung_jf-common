@@ -80,9 +80,6 @@ on post-fs-data
     # Create directory for HDCP 2.x
     mkdir /data/system/hdcp2 0775 system system
 
-    # Create directory for hostapd
-    mkdir /data/hostapd 0770 system wifi
-
     # Create directory from IMS services
     mkdir /data/shared 0755 system system
 
