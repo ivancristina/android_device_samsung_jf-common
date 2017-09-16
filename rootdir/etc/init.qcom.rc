@@ -484,7 +484,6 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
 service macloader /system/bin/macloader
     class late_start
     oneshot
-    seclabel u:r:macloader_exec:s0
 
 on property:init.svc.macloader=stopped
     chown root system /data/.rev
