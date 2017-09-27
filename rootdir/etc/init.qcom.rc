@@ -69,9 +69,9 @@ on post-fs-data
     # Create directory for CNE
     mkdir /data/connectivity 0771 system system
 
-	# Create folder for mm-qcamera-daemon
+    # Create folder for mm-qcamera-daemon
     mkdir /data/misc/camera 0770 camera camera
-	
+    
     # Create directory for H2K
     mkdir /data/misc/radio/hatp 0775 radio system
     chmod 0644 /efs/h2k.dat
@@ -455,7 +455,7 @@ service ril-daemon /vendor/bin/hw/rild
     class main
     user radio
     group radio cache inet misc audio log readproc wakelock diag
-	capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
 # but only if ro.data.large_tcp_window_size property is set.
@@ -494,7 +494,7 @@ service thermal-engine /system/bin/thermal-engine
     class main
     user root
     group root
-	
+    
 on property:wlan.driver.status=ok
     start macloader
 
