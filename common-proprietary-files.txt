@@ -151,7 +151,7 @@ lib/hw/sensors.msm8960.so
 lib/hw/sensorhubs.msm8960.so
 
 # Stlport
-lib/libstlport.so
+vendor/lib/libstlport.so
 
 # Thermal
 bin/thermal-engine
