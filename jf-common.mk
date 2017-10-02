@@ -151,6 +151,10 @@ PRODUCT_PACKAGES += \
 # IR
 PRODUCT_PACKAGES += \
     consumerir.msm8960
+	
+# IR HIDL interfaces
+PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-impl
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
