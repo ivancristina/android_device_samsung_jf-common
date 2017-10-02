@@ -82,11 +82,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
-	
-# Audio HIDL interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio.effect@2.0-impl
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
@@ -96,20 +91,11 @@ PRODUCT_COPY_FILES += \
 # Bluetooth packages
 PRODUCT_PACKAGES += \
     libbt-vendor
-	
-# Bluetooth HIDL interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl
 
 # Camera
 PRODUCT_PACKAGES += \
     Snap \
     camera.msm8960
-	
-# Camera HIDL interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    camera.device@1.0-impl.legacy
 
 #Additional camera
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -117,10 +103,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.composer@2.1-impl \
-    android.hardware.graphics.mapper@2.0-impl \
-    android.hardware.memtrack@1.0-impl \
     copybit.msm8960 \
     gralloc.msm8960 \
     hwcomposer.msm8960 \
@@ -135,13 +117,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.conf:/system/etc/gps.conf \
     $(LOCAL_PATH)/configs/sap.conf:/system/etc/sap.conf
 	
-# GPS HIDL interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl
-	
 # HIDL
+$(call inherit-product, $(LOCAL_PATH)/hidl.mk)
+
+# HIDL manifest
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/manifest.xml:system/vendor/manifest.xml
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \
@@ -151,10 +132,6 @@ PRODUCT_PACKAGES += \
 # IR
 PRODUCT_PACKAGES += \
     consumerir.msm8960
-	
-# IR HIDL interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
@@ -165,18 +142,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/samsung_remote_ir.kl:system/usr/keylayout/samsung_remote_ir.kl \
     $(LOCAL_PATH)/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
     $(LOCAL_PATH)/keylayout/ue_rf4ce_remote.kl:system/usr/keylayout/ue_rf4ce_remote.kl
-	
-# Keymaster HIDL interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl
 
 # Lights
 PRODUCT_PACKAGES += \
     lights.MSM8960
-	
-# Lights HIDL interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-impl
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -202,10 +171,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
-	
-# NFC HIDL interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.0-impl
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -225,10 +190,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Power
 PRODUCT_PACKAGES += \
     power.msm8960
-	
-# Power HIDL interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-impl
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -238,10 +199,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
-	
-# Sensors HIDL interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl
 
 # SPN override
 PRODUCT_COPY_FILES += \
@@ -250,14 +207,6 @@ PRODUCT_COPY_FILES += \
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8064ab.conf:system/etc/thermal-engine-8064ab.conf
-	
-# USB HIDL interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
-	
-# Vibrator HIDL interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -271,10 +220,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
-	
-# WiFi HIDL interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service
 
 # Common Qualcomm
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
