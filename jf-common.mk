@@ -229,10 +229,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
-
-# RIL
-PRODUCT_PACKAGES += \
-    libshim_ril
 	
 # Sensors HIDL interfaces
 PRODUCT_PACKAGES += \

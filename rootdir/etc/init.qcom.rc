@@ -38,8 +38,6 @@ on early-init
     chmod 0755 /sys/kernel/debug
 
 on init
-    export LD_SHIM_LIBS /system/lib/libril.so|libshim_ril.so
-
     # Set permissions for efs partition
     mkdir /efs 0771 system radio
 
@@ -449,13 +447,6 @@ service netmgrd /system/bin/netmgrd
     class main
     user root
     group root wifi wakelock radio inet system
-
-# Start ril-daemon
-service ril-daemon /vendor/bin/hw/rild
-    class main
-    user radio
-    group radio cache inet misc audio log readproc wakelock diag
-    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
 # but only if ro.data.large_tcp_window_size property is set.
