@@ -93,7 +93,7 @@ TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
 
 # HIDL
-DEVICE_MANIFEST_FILE := device/samsung/jf-common/configs/manifest.xml
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
 # Includes
 TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
