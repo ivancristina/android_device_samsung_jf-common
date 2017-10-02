@@ -150,7 +150,7 @@ lib/libsensirion_j1.so
 lib/hw/sensors.msm8960.so
 lib/hw/sensorhubs.msm8960.so
 
-# Stlport
+# STLport
 vendor/lib/libstlport.so
 
 # Thermal
