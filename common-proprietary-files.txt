@@ -1,3 +1,6 @@
+# STLport
+vendor/lib/libstlport.so
+
 # ADSP
 lib/libadsprpc.so
 
@@ -149,9 +152,6 @@ lib/libsam.so
 lib/libsensirion_j1.so
 lib/hw/sensors.msm8960.so
 lib/hw/sensorhubs.msm8960.so
-
-# STLport
-vendor/lib/libstlport.so
 
 # Thermal
 bin/thermal-engine
