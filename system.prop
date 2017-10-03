@@ -29,9 +29,6 @@ persist.bluetooth.disableabsvol=true
 # Charger
 ro.enable_boot_charger_mode=1
 
-#Camera
-persist.camera.cpp.duplication=false
-
 # Display
 debug.hwui.use_buffer_age=false
 debug.composition.type=c2d
@@ -67,9 +64,6 @@ persist.radio.use_se_table_only=1
 ro.telephony.mms_data_profile=5
 ro.telephony.ril_class=jflteRIL
 
-# Sound steps
-ro.config.media_vol_steps=20
-
 # Time
 persist.timed.enable=true
 
@@ -78,6 +72,3 @@ ro.build.shutdown_timeout=5
 
 # WiFi
 wifi.interface=wlan0
-
-#Google assistant
-ro.opa.eligible_device=true
