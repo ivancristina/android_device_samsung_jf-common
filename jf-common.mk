@@ -210,7 +210,8 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    libshim_ril
+    libshim_ril \
+    libshim_atomic
 	
 # Sensors HIDL interfaces
 PRODUCT_PACKAGES += \
