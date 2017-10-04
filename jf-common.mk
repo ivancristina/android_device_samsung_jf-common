@@ -191,6 +191,17 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
+<<<<<<< HEAD
+=======
+
+# RIL
+PRODUCT_PACKAGES += \
+    libshim_ril
+	
+# Sensors HIDL interfaces
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
+>>>>>>> parent of 2e94570... remove old ril and add new
 
 # SPN override
 PRODUCT_COPY_FILES += \
