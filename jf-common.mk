@@ -68,6 +68,8 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
     audio.a2dp.default \
     audio.primary.msm8960 \
     audio.r_submix.default \
@@ -84,21 +86,27 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
-	
-# Bluetooth packages
+    
+# Bluetooth HAL
 PRODUCT_PACKAGES += \
-    libbt-vendor
+    libbt-vendor \
+    android.hardware.bluetooth@1.0-impl
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
-    camera.msm8960
-
-
+    camera.msm8960 \
+    Snap
+    
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.mapper@2.0-impl \
     copybit.msm8960 \
     gralloc.msm8960 \
     hwcomposer.msm8960 \
@@ -112,11 +120,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.conf:/system/etc/gps.conf \
     $(LOCAL_PATH)/configs/sap.conf:/system/etc/sap.conf
-	
+    
 # HIDL
     $(call inherit-product, $(LOCAL_PATH)/hidl.mk)
 
-# HIDL manifest
+# HIDL
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
 
@@ -127,6 +135,7 @@ PRODUCT_PACKAGES += \
 
 # IR
 PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-impl \
     consumerir.msm8960
 
 # Keylayouts
@@ -139,8 +148,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/sec_touchkey.kl:system/usr/keylayout/sec_touchkey.kl \
     $(LOCAL_PATH)/keylayout/ue_rf4ce_remote.kl:system/usr/keylayout/ue_rf4ce_remote.kl
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
+    
 # Lights
 PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
     lights.MSM8960
 
 # Media
@@ -157,6 +171,7 @@ PRODUCT_COPY_FILES += \
 
 # NFC packages
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0-impl \
     libnfc-nci \
     libnfc_nci_jni \
     nfc_nci.bcm2079x.msm8960 \
@@ -165,8 +180,8 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/vendor/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/configs/nfcee_access.xml:system/vendor/etc/nfcee_access.xml
+    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -178,9 +193,14 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
     libstagefrighthw
+    
+# Default OMX service to non-Treble
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.media.treble_omx=false
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
     power.msm8960
 
 # Ramdisk
@@ -192,16 +212,30 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl 
+
 # SPN override
 PRODUCT_COPY_FILES += \
     device/samsung/jf-common/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
+
 
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8064ab.conf:system/etc/thermal-engine-8064ab.conf
 
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+    
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
+
 # Wifi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     libnetcmdiface \
     macloader \
     hostapd \
